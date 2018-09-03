@@ -27,8 +27,8 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-// not defined as we have tried
-// to reassign
+// this will run as the const's are different
+// The murderer is Miss Scarlet
 
 #### Episode 2
 
@@ -47,7 +47,9 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-// not defined as we have const murderer and //const changeMurderer
+// TypeError: Assignment to constant variable.
+// murderer was passed a new value Mrs Peacock
+// even tho const wasn't used a second time
 
 #### Episode 3
 
@@ -58,14 +60,16 @@ const declareMurderer = function() {
   let murderer = 'Mrs. Peacock';
   return `The murderer is ${murderer}.`;
 }
-// this will return the murderer as Mrs Peacock
+
 const firstVerdict = declareMurderer();
 console.log('First Verdict: ', firstVerdict);
+// this will return the murderer as Mrs Peacock
 
 const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 ```
-// TypeError: Assignment to constant variable.
+// Can't see any conflicts here so would return
+// Prof Plum?
 
 #### Episode 4
 
@@ -83,6 +87,7 @@ const suspects = declareAllSuspects();
 console.log(suspects);
 console.log(`Suspect three is ${suspectThree}.`);
 ```
+// declares all and number 3 is Mrs P
 
 #### Episode 5
 
@@ -105,6 +110,8 @@ changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
 ```
+// I'm going to say it will return Revolver as
+// we define the value for changeWeapon on 109?
 
 #### Episode 6
 
@@ -129,6 +136,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+// Mrs White
 
 #### Episode 7
 
@@ -159,6 +167,8 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+// Mr Green? as the first function() is set as // Mr Green and this is what will be passed to // declareMurderer and is called with const
+// verdict
 
 #### Episode 8
 
@@ -198,6 +208,10 @@ changeScenario();
 const verdict = declareWeapon();
 console.log(verdict);
 ```
+// struggled to follow this one so I ran it.
+// because we pass a value for unexpectedOutcome
+// this changes the weapon to Candle Stick where // in scenario 7 no value was passed so it stayed
+// as Mr Green?
 
 #### Episode 9
 
@@ -215,6 +229,7 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+//Went with Mrs Peacock but still not 100% why its Prof Plum
 
 ### Extensions
 
